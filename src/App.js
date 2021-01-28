@@ -11,6 +11,7 @@ import './App.css';
 import 'tachyons';
 
 
+
 const particlesOptions ={
       particles:{
           number:{
