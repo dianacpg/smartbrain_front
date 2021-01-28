@@ -89,7 +89,9 @@ class App extends Component{
     this.setState({imageUrl: this.state.input});
       fetch('https://git.heroku.com/nameless-crag-43854.git/imageurl', {
         method: 'post',
-        headers: {'Content-Type': 'application/json'},
+        headers: {'Content-Type': 'application/json',
+                  "Access-Control-Allow-Origin":'*'
+                },
         body: JSON.stringify({
           input: this.state.input
         })
@@ -99,7 +101,8 @@ class App extends Component{
         if (response) {
           fetch('https://git.heroku.com/nameless-crag-43854.git/image', {
             method: 'put',
-            headers: {'Content-Type': 'application/json'},
+            headers: {'Content-Type': 'application/json',
+          "Access-Control-Allow-Origin":'*'},
             body: JSON.stringify({
             id: this.state.user.id
             })
