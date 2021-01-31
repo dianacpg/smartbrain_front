@@ -97,7 +97,7 @@ class App extends Component{
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('/image', {
+          fetch('https://git.heroku.com/nameless-crag-43854.git/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
