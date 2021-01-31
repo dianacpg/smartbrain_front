@@ -27,6 +27,7 @@ class Register extends React.Component {
     fetch('https://git.heroku.com/nameless-crag-43854.git/register', {
       method: 'POST',
       mode: 'cors',
+      cache: 'no-cache',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         email: this.state.email,

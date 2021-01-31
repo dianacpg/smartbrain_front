@@ -90,6 +90,7 @@ class App extends Component{
       fetch('https://git.heroku.com/nameless-crag-43854.git/imageurl', {
         method: 'POST',
         mode: 'cors',
+        cache: 'no-cache',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
           input: this.state.input
@@ -101,6 +102,7 @@ class App extends Component{
           fetch('https://git.heroku.com/nameless-crag-43854.git/image', {
             method: 'PUT',
             mode: 'cors',
+            cache: 'no-cache',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
             id: this.state.user.id
