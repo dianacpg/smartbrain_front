@@ -25,7 +25,8 @@ class Register extends React.Component {
 
   onSubmitSignIn = () => {
     fetch('https://git.heroku.com/nameless-crag-43854.git/register', {
-      method: 'post',
+      method: 'POST',
+      mode: 'cors',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         email: this.state.email,
