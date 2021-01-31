@@ -87,11 +87,9 @@ class App extends Component{
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://git.heroku.com/nameless-crag-43854.git/imageurl', {
+      fetch('/imageurl', {
         method: 'post',
-        headers: {'Content-Type': 'application/json',
-                  "Access-Control-Allow-Origin":'*'
-                },
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
           input: this.state.input
         })
@@ -99,10 +97,9 @@ class App extends Component{
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://git.heroku.com/nameless-crag-43854.git/image', {
+          fetch('/image', {
             method: 'put',
-            headers: {'Content-Type': 'application/json',
-          "Access-Control-Allow-Origin":'*'},
+            headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
             id: this.state.user.id
             })
