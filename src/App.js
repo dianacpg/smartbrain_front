@@ -87,7 +87,7 @@ class App extends Component{
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://git.heroku.com/nameless-crag-43854.git/imageurl', {
+      fetch('https://nameless-crag-43854.herokuapp.com/imageurl', {
         method: 'POST',
         mode: 'cors',
         cache: 'no-cache',
@@ -99,7 +99,7 @@ class App extends Component{
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://git.heroku.com/nameless-crag-43854.git/image', {
+          fetch('https://nameless-crag-43854.herokuapp.com/image', {
             method: 'PUT',
             mode: 'cors',
             cache: 'no-cache',

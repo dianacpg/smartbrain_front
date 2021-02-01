@@ -19,7 +19,7 @@ class Signin extends React.Component {
   }
 
   onSubmitSignIn = () => {
-    fetch('https://git.heroku.com/nameless-crag-43854.git/signin', {
+    fetch('https://nameless-crag-43854.herokuapp.com/signin', {
       method: 'POST',
       mode: 'cors',
       cache: 'no-cache',
