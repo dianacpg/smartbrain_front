@@ -5,7 +5,6 @@ Made with:
 - Node. js
 - Express.js
 - PostgreSQL
-- Heroku
 
 Link: https://smartbraindcpg.herokuapp.com/
 
